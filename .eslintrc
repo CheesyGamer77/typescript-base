@@ -34,6 +34,37 @@
 		"no-lonely-if": "error",
 		"no-multi-spaces": "error",
 		"no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1, "maxBOF": 0 }],
+        "no-restricted-globals": [
+            "error",
+            {
+                "name": "Buffer",
+                "message": "Import Buffer from `node:buffer` instead"
+            },
+            {
+                "name": "process",
+                "message": "Import process from `node:process` instead"
+            },
+            {
+                "name": "setTimeout",
+                "message": "Import setTimeout from `node:timers` instead"
+            },
+            {
+                "name": "setInterval",
+                "message": "Import setInterval from `node:timers` instead"
+            },
+            {
+                "name": "setImmediate",
+                "message": "Import setImmediate from `node:timers` instead"
+            },
+            {
+                "name": "clearTimeout",
+                "message": "Import clearTimeout from `node:timers` instead"
+            },
+            {
+                "name": "clearInterval",
+                "message": "Import clearInterval from `node:timers` instead"
+            }
+        ],
 		"no-shadow": "off",
     	"@typescript-eslint/no-shadow": "error",
 		"no-trailing-spaces": ["error"],
